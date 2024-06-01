@@ -12,22 +12,22 @@ const questions = [
   {
       type: 'input',
       name: 'description',
-      message: 'Provide a description of your project:',
+      message: 'Please provide a brief description of your project:',
   },
   {
       type: 'input',
       name: 'installation',
-      message: 'What are the installation instructions?',
+      message: 'What are the installation instructions for the project? Provide any requiremnts to run it.',
   },
   {
       type: 'input',
       name: 'usage',
-      message: 'What is the usage information?',
+      message: 'What are the key functions of your project and what does it accomplish?',
   },
   {
       type: 'input',
       name: 'contributing',
-      message: 'What can others contribute',
+      message: 'How can others contribute to this project?',
   },
   {
       type: 'input',
@@ -48,7 +48,7 @@ const questions = [
       type: 'list',
       name: 'license',
       message: 'Which license would you like to use?',
-      choices: ['MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause', 'None'],
+      choices: ['None','MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause'],
   },
 ];
 
@@ -67,7 +67,7 @@ function init() {
           writeToFile('README.md', markdown);
       })
       .catch((error) => {
-          console.error('An error occurred:', error);
+          console.error('An error has occurred:', error);
       });
 }
 // Function call to initialize app
