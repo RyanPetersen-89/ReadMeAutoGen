@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+//These are the required packages used in the creation of the project.
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./generateMarkdown');
-// TODO: Create an array of questions for user input
+
+// These are the questions that will prompt the user for inputs when they go to generate a new README.md file
 const questions = [
   {
       type: 'input',
@@ -52,14 +53,14 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
+//This function creates and writes the markdown file when it is run
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
       err ? console.error(err) : console.log('Success! Your README.md file has been generated.')
   );
 }
 
-// TODO: Create a function to initialize app
+// This function Initializes the application when 'node index.js' is called in the commandline
 function init() {
   inquirer.prompt(questions)
       .then((responses) => {
