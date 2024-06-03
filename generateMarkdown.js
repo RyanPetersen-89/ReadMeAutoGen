@@ -69,5 +69,5 @@ If you have any questions about the repo, open an issue or contact me directly a
 ${renderLicenseSection(data.license)}
 `;
 }
-//this exports this file so that the index.js file can read and access this file.
+// This exports this file so that the index.js file can read and access this file.
 module.exports = generateMarkdown;
