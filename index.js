@@ -1,4 +1,4 @@
-//These are the required packages used in the creation of the project.
+// These are the required packages used in the creation of the project.
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./generateMarkdown');
@@ -53,7 +53,7 @@ const questions = [
   },
 ];
 
-//This function creates and writes the markdown file when it is run
+// This function creates and writes the markdown file when it is run
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
       err ? console.error(err) : console.log('Success! Your README.md file has been generated.')
