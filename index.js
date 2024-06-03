@@ -65,7 +65,9 @@ function init() {
   inquirer.prompt(questions)
       .then((responses) => {
           const markdown = generateMarkdown(responses);
-          writeToFile('README.md', markdown);
+          writeToFile('TestREADMEforvideo.md', markdown);
+          // The name of the README ^^^ was changed in the code above for this video
+          // so that it is distinguishable from the projects actual README.md file
       })
       .catch((error) => {
           console.error('An error has occurred:', error);
